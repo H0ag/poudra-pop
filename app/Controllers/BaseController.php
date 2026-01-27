@@ -27,6 +27,8 @@ abstract class BaseController extends Controller
 
     // protected $session;
 
+    protected $twig;
+
     /**
      * @return void
      */
@@ -38,6 +40,12 @@ abstract class BaseController extends Controller
 
         // Caution: Do not edit this line.
         parent::initController($request, $response, $logger);
+
+        $_SERVER["CI_ENVIRONMENT"] === "development" ||
+        $_SERVER["CI_STATUS"] === "maintenance"
+            ? ($config = ["cache" => false])
+            : ($config = []);
+        $this->twig = new \Kenjis\CI4Twig\Twig($config);
 
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
