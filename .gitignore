@@ -133,3 +133,4 @@ _modules/*
 /builds
 /writable
 /tests
+/start.sh
