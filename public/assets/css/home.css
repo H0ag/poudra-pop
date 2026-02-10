@@ -1,0 +1,42 @@
+body {
+    background-color: #008080; /* Vert Windows classique */
+    font-family: "MS Sans Serif", "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+
+    background-image: url("/assets/images/background.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+#main-container {
+    width: 90rem;
+    height: 90vh;
+    border: 5px double pink;
+
+    background: rgba(221, 177, 221, 0.555);
+    backdrop-filter: blur(10px);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right, 
+        #7FFF00,
+        #FF69B4,
+        #00FFFF,
+        #9370DB
+    );
+    border-bottom: 2px solid pink;    
+}
+header img {
+    height: 150px;
+}
