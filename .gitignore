@@ -129,7 +129,6 @@ _modules/*
 /preload.php
 /phpunit.xml.dist
 /.env
-/composer.*
 /builds
 /writable
 /tests
