@@ -132,6 +132,7 @@ header img {
     height: 100%;
     position: absolute;
     top: 0;
+    transition: .1s;
 }
 
 .floor-wrapper {
@@ -231,4 +232,7 @@ header img {
         inset 0px -2px 2px rgba(0,0,0,0.2),
         0px 0px 0px #006666,
         0px 2px 3px rgba(0,0,0,0.3);
+}
+.catalogue-item img:hover {
+    transform: scale(1.1);
 }
