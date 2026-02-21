@@ -1,0 +1,142 @@
+#login-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+#casino-bag-login-debz {
+    height: 100%;
+}
+#login-container-gears {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 36rem; */
+    filter: opacity(0.85);
+
+    width: 100vw;
+    height: 100vh;
+
+    max-width: 1200px; 
+    margin: 0 auto;
+
+    padding-top: 15vh;
+
+}
+#login-container-gears img {
+    height: 25vh;
+}
+.gears {
+    display: inline-block; 
+    animation: gear 3s linear infinite;
+    animation-play-state: paused;
+    transform-origin: center;
+    will-change: transform;
+}
+.gears-blue {
+    filter: invert(100%) brightness(1);
+}
+.gears-yellow {
+    filter: hue-rotate(60deg) brightness(1.5) saturate(200%);
+}
+
+@keyframes gear {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gears {
+    animation-play-state: running;
+}
+#login-button:hover {
+    transform: scale(1.1);
+}
+
+#login-button {
+    position: absolute;
+    z-index: 2000;
+    opacity: 1;
+
+    pointer-events:all;
+    user-select:all;
+    -webkit-user-drag:auto;
+
+    transition: .1s;
+}
+#login-button img {
+    height: 13vh;
+}
+
+#main-container {
+    width: 90rem;
+    height: 90vh;
+    /* border: 5px double pink; */
+    box-shadow: rgba(255, 255, 255, 1) 0px 5px 15px;
+
+    background: rgba(255, 236, 255, 0.637);
+    backdrop-filter: blur(10px);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--rainbow)
+}
+header img {
+    height: 150px;
+}
+.poudra-marquee {
+    background: #000;
+    color: #7FFF00;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+#navbar {
+    width: 100%;
+    background-color: rgb(253, 239, 242);
+}
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+#navbar ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    padding: 5px;
+    border: 2px dashed transparent;
+}
+#navbar ul a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+}
+#navbar ul li:has(a:hover) {
+    background-color: #ffa8ff !important;
+    border: 2px dashed #00FFFF;
+}
