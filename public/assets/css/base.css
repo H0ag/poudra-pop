@@ -10,13 +10,14 @@
 body {
     background-color: pink; /* Vert Windows classique */
     /* font-family: "MS Sans Serif", "Arial", sans-serif; */
+    font-family: 'Arial Rounded MT Bold', 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 
     margin:0;
-    width: 100vw;
-    height: 100%;
+    padding-top: 1rem;
+    width: 100%;
     min-height: 100vh;
 
     background-image: url("/assets/images/background.webp");
@@ -24,10 +25,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
+    background-attachment: fixed;
+}
+.not-selectable-img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 #main-container {
     width: 90rem;
-    height: 90vh;
+    min-height: 90vh;
     /* border: 5px double pink; */
     box-shadow: rgba(255, 255, 255, 1) 0px 5px 15px;
 
@@ -82,4 +89,21 @@ header img {
 #navbar ul li:has(a:hover) {
     background-color: #ffa8ff !important;
     border: 2px dashed #00FFFF;
+}
+.big-text {
+    color: white;
+    text-transform: uppercase;
+    -webkit-text-stroke: 8px rgb(59, 52, 53);
+    paint-order: stroke fill;
+    filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.2));
+    line-height: .5;
+}
+.small-text {
+    color: white;
+    text-transform: uppercase;
+    -webkit-text-stroke: 4px rgb(59, 52, 53);
+    paint-order: stroke fill;
+    filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.2));
+    line-height: .2;
+    font-size: 2rem;
 }
