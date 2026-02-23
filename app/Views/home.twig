@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POUDRA-POP</title>
-    
+
+    {% include "inc/referencement.twig" %}
+
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/home.css">
 
@@ -27,8 +29,69 @@
         </nav>
         <div id="container">
             <div id="container-left">
-                <h1>🔥🤪 Nos meilleures ventes HAHA 💸✨</h1>
+                <div class="left-items-container">
+                    <div class="left-items-container-text small-text">
+                        <p>notre</p>
+                        <p>mascotte POP</p>
+                    </div>
+                    <img src="/assets/images/pop-welcome.webp" alt="Macotte pop" class="not-selectable-img">
+                </div>
+                <div class="left-items-container">
+                    <img src="/assets/images/paiements-poudra-pop.png" alt="Paiements Poudra-pop" class="not-selectable-img">
+                </div>
+            </div>
+            <div id="container-right">
+                <div id="home-banner-container">
+                    <img src="/assets/images/home-banner.webp" alt="Poudra-pop home banner" id="home-banner-banner" class="not-selectable-img">
+                    <div id="home-banner" class="big-text"> 
+                        <p>bienvenue dans</p>
+                        <p>l&#039;univers poudra-pop</p>
+                    </div>
+                </div>
+                <h1 class="big-text">🔥🤪 Nos meilleures ventes HAHA 💸✨</h1>
                 <div id="catalogue-container">
+                    <div class="catalogue-item">
+                        <div class="catalogue-item-thumbnail">
+                            <div class="floor-wrapper">
+                                <div class="poudra-floor"></div>
+                            </div>
+                            <img alt="Product thumbnail" src="/assets/images/products/Sours.webp">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title">S-OURS</h3>
+                            
+                            <span class="product-tag">⚡ Goût Acide ⚡</span>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="price-tag">12.99 €</div>
+                            
+                            <button class="btn-add-cart">
+                                AJOUTER 🛒
+                            </button>
+                        </div>
+                    </div>
+                    <div class="catalogue-item">
+                        <div class="catalogue-item-thumbnail">
+                            <div class="floor-wrapper">
+                                <div class="poudra-floor"></div>
+                            </div>
+                            <img alt="Product thumbnail" src="/assets/images/products/el-super-heroine.webp">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title">EL SUPER HEROÏNE</h3>
+                            
+                            <span class="product-tag">⚡ Goût??? Argh. ⚡</span>
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="price-tag">122.99 €</div>
+                            
+                            <button class="btn-add-cart">
+                                AJOUTER 🛒
+                            </button>
+                        </div>
+                    </div>
                     <div class="catalogue-item">
                         <div class="catalogue-item-thumbnail">
                             <div class="floor-wrapper">
@@ -72,9 +135,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="container-right">
-                
             </div>
         </div>
     </main>
