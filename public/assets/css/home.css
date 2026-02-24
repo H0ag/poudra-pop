@@ -164,9 +164,21 @@
         0px 0px 0px #006666,
         0px 2px 3px rgba(0,0,0,0.3);
 }
+.catalogue-item img {
+    animation: MoveUpDown 1.5s linear infinite;
+}
 .catalogue-item img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .left-items-container {
