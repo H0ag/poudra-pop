@@ -200,7 +200,6 @@
 }
 
 #tutorial-container {
-    width: 100%;
     background:var(--purple);
     padding: 1rem;
 }
