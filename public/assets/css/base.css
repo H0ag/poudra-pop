@@ -9,7 +9,7 @@
     --purple: #fbd8f7;
 }
 body {
-    background-color: pink; /* Vert Windows classique */
+    background-color: pink;
     /* font-family: "MS Sans Serif", "Arial", sans-serif; */
     font-family: 'Arial Rounded MT Bold', 'Inter', sans-serif;
     display: flex;
