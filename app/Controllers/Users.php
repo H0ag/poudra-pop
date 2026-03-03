@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Users extends BaseController
 {
-    public function login()
+    public function login():string
     {
         return $this->twig->render("login");
     }
