@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POUDRA-POP</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/product.css">
+    <script defer src="/assets/js/product.js"></script>
+
+    <!-- Analytics poudra-pop -->
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">🏠 Accueil</a></li>
+                <li><a href="/catalogue">🍭 Catalogue</a></li>
+                <li><a href="/cart">🛒 Panier</a></li>
+                <li><a href="/login">👤 Compte</a></li>
+            </ul>
+        </nav>
+        <div id="container">
+            <div id="container-left">
+                <div class="left-items-container">
+                    <div class="left-items-container-text small-text">
+                        <p>notre</p>
+                        <p>mascotte POP</p>
+                    </div>
+                    <img src="/assets/images/pop-welcome.webp" alt="Macotte pop" class="not-selectable-img">
+                </div>
+                <div class="left-items-container">
+                    <img src="/assets/images/paiements-poudra-pop.png" alt="Paiements Poudra-pop" class="not-selectable-img">
+                </div>
+            </div>
+            <div id="container-right">
+                <div id="container-item-left">
+                    {# <img src="/assets/images/products/coco-caline.webp" /> #}
+                    <div class="item-thumbnail" id="zoom-trigger">
+                        <div class="floor-wrapper">
+                            <div class="poudra-floor"></div>
+                        </div>
+                        <img alt="Product thumbnail 1" src="/assets/images/products/coco-caline-pic.webp" class="image-bottom" id="target-img">
+                        <img alt="Product thumbnail 2" src="/assets/images/products/coco-caline.webp" class="image-top">
+                    </div>
+                    <dialog id="lightbox">
+                        <div class="lightbox-content">
+                            <img src="" alt="Coco caline image" id="lightbox-img">
+                            <button id="close-lightbox">Close</button>
+                        </div>
+                    </dialog>
+                </div>
+                <div id="container-item-right">
+                    <h1 id="product-item-title" class="big-text">coco-caline 😉</h1>
+                    <p id="product-item-price"><strong>17.90€</strong></p>
+                    <p style="margin:0;">En stock</p>
+                    <p>R&eacute;f: CC-CLN-001</p>
+                    <button class="btn-add-cart">
+                        AJOUTER AU PANIER
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
