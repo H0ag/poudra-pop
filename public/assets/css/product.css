@@ -196,36 +196,17 @@
 }
 
 .btn-add-cart {
-    background: linear-gradient(to bottom, #00FFFF, #008B8B);
-    border: none;
-    color: white;
-    font-family: 'Comic Sans MS', bold;
-    font-weight: bold;
-    padding: 15px 15px;
+    padding: 10px;
+    background: var(--rainbow);
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-weight: 900;
+    color: black;
     font-size: 1.5rem;
-    border-radius: 20px;
-    cursor: pointer;
-    
-    box-shadow: 
-        inset 0px 2px 2px rgba(255,255,255,0.6),
-        inset 0px -2px 2px rgba(0,0,0,0.2),
-        0px 4px 0px #006666,
-        0px 6px 5px rgba(0,0,0,0.3);
-    transition: all 0.1s;
 }
 .btn-add-cart:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        inset 0px 2px 2px rgba(255,255,255,0.6),
-        inset 0px -2px 2px rgba(0,0,0,0.2),
-        0px 0px 0px #006666,
-        0px 2px 3px rgba(0,0,0,0.3);
-}
-.btn-add-cart:active {
-    transform: translateY(2px);
-    box-shadow: 
-        inset 0px 2px 2px rgba(255,255,255,0.6),
-        inset 0px -2px 2px rgba(0,0,0,0.2),
-        0px 0px 0px #006666,
-        0px 2px 3px rgba(0,0,0,0.3);
+    border: 1px solid green;
+    cursor: pointer;
+    filter: brightness(1.1);
 }
