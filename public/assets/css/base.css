@@ -108,3 +108,21 @@ header img {
     line-height: .2;
     font-size: 2rem;
 }
+
+@media screen and (max-width:740px) {
+    body {
+        padding-top: 0;
+    }
+    #container {
+        flex-direction: column-reverse;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .big-text {
+        line-height: 1;
+    }
+    #container-left, #container-right {
+        width: 100% ;
+    }
+}
