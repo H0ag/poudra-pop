@@ -56,4 +56,4 @@ Rendez-vous sur `localhost:8080` pour la dose de sucre !
 
 # Base de données
 ## MCD
-![MCD poudra-pop](documentation/images/bdd_mcd.png)
+[MCD poudra-pop](documentation/images/bdd_mcd.jpg)
