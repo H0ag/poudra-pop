@@ -198,3 +198,33 @@
 .left-items-container img {
     width: 100%;
 }
+#left-items-container-username-container {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    background: #774d204f;
+    position: relative;
+    line-height: 1;
+}
+#left-items-container-username-container p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#left-items-container-logout {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    background: #ff000087;
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+}
+#left-items-container-logout:hover {
+    background: #ff0000d5;
+    cursor: pointer;
+}
