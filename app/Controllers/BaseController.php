@@ -48,6 +48,7 @@ abstract class BaseController extends Controller
             ? ($config = ["cache" => false])
             : ($config = []);
         $this->twig = new \Kenjis\CI4Twig\Twig($config);
+        $this->twig->addGlobal('session', session());
         $this->userModel = new Users();
 
         // Preload any models, libraries, etc, here.
