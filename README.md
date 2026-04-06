@@ -22,7 +22,7 @@ Pour ce projet, on a utilisé des outils sérieux pour un business qui ne l'est 
 # 🚀 INSTALLATION (Pour les petits génies)
 1. Cloner le projet dans ton dossier htdocs ou www :
 ```bash
-git clone https://github.com/ton-pseudo/poudra-pop.git
+git clone https://github.com/h0ag/poudra-pop.git
 ```
 2. Installer les dépendances (le sucre de synthèse) :
 ```bash
@@ -53,3 +53,7 @@ Rendez-vous sur `localhost:8080` pour la dose de sucre !
 - **Fonts** : Comic Sans MS (parce qu'on a du goût), Impact (pour crier les prix).
 - **Couleurs** : #FF00FF (Magenta), #FFFF00 (Jaune d'œuf), #00FFFF (Bleu qui pique).
 - **Features** : Livre d'or, compteur de visites, et boutons "Vote for me" qui ne mènent nulle part.
+
+# Base de données
+## MCD
+![MCD poudra-pop](documentation/images/bdd_mcd.png)
