@@ -1,0 +1,25 @@
+<div id="container-left">
+    <div class="left-items-container">
+        <div class="left-items-container-text small-text">
+            <p>notre</p>
+            <p>mascotte POP</p>
+        </div>
+        <img src="/assets/images/pop-welcome.webp" alt="Macotte pop" class="not-selectable-img">
+    </div>
+    <div class="left-items-container">
+        {% if session.has('user') %}
+            <div class="left-items-container-text small-text" style="position:relative;">
+                <p>Ton acc&egrave;s VIP</p>
+            </div>
+            <div id="left-items-container-username-container" class="small-text">
+                <p>-- <img src="{{ session.user.avatar }}" alt="{{ session.user.name }}'s profile pic" style="width:2rem;aspect-ratio:1;"/> {{ session.user.name }} --</p>
+            </div>
+            <a href="/auth/logout" id="left-items-container-logout">Se d&eacute;connecter</a>
+        {% else %}
+            <div class="left-items-container-text small-text">
+                <p>d&eacute;connect&eacute;...</p>
+            </div>
+            <img src="/assets/images/pop-sad.webp" alt="Macotte pop sad" class="not-selectable-img">
+        {% endif %}
+    </div>
+</div>
