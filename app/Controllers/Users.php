@@ -103,7 +103,7 @@ class Users extends BaseController
 
             session()->set('user', $sessionData);
 
-            return redirect()->to('/getinfos');
+            return redirect()->to('/');
 
         } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
             log_message('error', 'Google OAuth error: ' . $e->getMessage());
@@ -124,4 +124,5 @@ class Users extends BaseController
         return true;
     }
 
+    
 }
