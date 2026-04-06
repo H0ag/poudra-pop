@@ -1,0 +1,12 @@
+<nav id="navbar">
+    <ul>
+        <li><a href="/">🏠 Accueil</a></li>
+        <li><a href="/catalogue">🍭 Catalogue</a></li>
+        <li><a href="/cart">🛒 Panier</a></li>
+        {% if session.has('user') %}
+            <li><a href="/dashboard">👤 Dashboard</a></li>
+        {% else %}
+            <li><a href="/login">👤 Login</a></li>
+        {% endif %}
+    </ul>
+</nav>
