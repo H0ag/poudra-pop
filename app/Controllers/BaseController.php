@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use App\Models\Users;
 
 /**
  * BaseController provides a convenient place for loading components
@@ -28,6 +29,7 @@ abstract class BaseController extends Controller
     // protected $session;
 
     protected $twig;
+    protected $userModel;
 
     /**
      * @return void
@@ -46,6 +48,7 @@ abstract class BaseController extends Controller
             ? ($config = ["cache" => false])
             : ($config = []);
         $this->twig = new \Kenjis\CI4Twig\Twig($config);
+        $this->userModel = new Users();
 
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
