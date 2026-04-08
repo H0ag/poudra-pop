@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POUDRA-POP - tableau de bord</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+
+    <!-- Analytics poudra-pop -->
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+        {% include "inc/navbar.twig" %}
+        <div id="container">
+            {% include "inc/sidebar.twig" %}
+            <div id="container-right">
+                <div id="home-banner-container">
+                    <img src="/assets/images/home-banner.webp" alt="Poudra-pop home banner" id="home-banner-banner" class="not-selectable-img">
+                    <div id="home-banner" class="big-text"> 
+                        <p>tableau de bord</p>
+                        <p>de ton espace VIP</p>
+                    </div>
+                </div>
+                <h1 class="big-text">REGARDE 👀 TES INFOS 📊🔥</h1>
+                
+            </div>
+        </div>
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
