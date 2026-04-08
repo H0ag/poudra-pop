@@ -57,3 +57,11 @@ Rendez-vous sur `localhost:8080` pour la dose de sucre !
 # Base de données
 ## MCD
 ![MCD poudra-pop](https://raw.githubusercontent.com/H0ag/poudra-pop/refs/heads/main/documentation/images/bdd_mcd.jpg)
+## MLD
+```
+users (id, google_id, email, display_name, profile_picture_url, created_at)
+categories (id, name, slug)
+products (id, #category_id, reference, name, price, stock_status, composition, flavor, effect, image_pixel_base64, image_realistic_base64, is_best_seller)
+orders (id, #user_id, total_price, status, payment_method, created_at)
+order_items (id, #order_id, #product_id, quantity, unit_price)
+```
