@@ -11,8 +11,8 @@
             <div class="left-items-container-text small-text" style="position:relative;">
                 <p>Ton acc&egrave;s VIP</p>
             </div>
-            <div id="left-items-container-username-container" class="small-text">
-                <p>-- <img src="{{ session.user.avatar }}" alt="{{ session.user.name }}'s profile pic" style="width:2rem;aspect-ratio:1;"/> {{ session.user.name }} --</p>
+            <div id="left-items-container-username-container">
+                <p class="small-text">-- {{ session.user.name }} --</p>
             </div>
             <a href="/auth/logout" id="left-items-container-logout">Se d&eacute;connecter</a>
         {% else %}
