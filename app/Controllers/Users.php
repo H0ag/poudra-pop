@@ -13,11 +13,6 @@ class Users extends BaseController
         return $this->twig->render("login");
     }
 
-    private function login_user()
-    {
-        
-    }
-
     /////////////// OAUTH /////////////////
     private function getProvider(): Google
     {
@@ -114,7 +109,7 @@ class Users extends BaseController
     public function logout()
     {
         session()->remove('user');
-        return redirect()->to('/');
+        return redirect()->to('/login');
     }
 
     public function infos()
@@ -124,5 +119,13 @@ class Users extends BaseController
         return true;
     }
 
-    
+    public function dashboard()
+    {
+        $user = session()->get('user');
+        if(!empty($user) && $user['isLoggedIn']) {
+            return $this->twig->render("dashboard");
+        } else {
+            return redirect()->to('/login');
+        }
+    }
 }
