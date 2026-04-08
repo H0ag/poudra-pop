@@ -205,13 +205,13 @@
     font-weight: 600;
     backdrop-filter: blur(10px);
     background: #774d204f;
-    position: relative;
-    line-height: 1;
 }
 #left-items-container-username-container p {
     display: flex;
     text-align: center;
     justify-content: center;
+    position: relative;
+    line-height: 1;
 }
 #left-items-container-logout {
     text-align: center;
