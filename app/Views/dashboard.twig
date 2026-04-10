@@ -31,7 +31,19 @@
                     </div>
                 </div>
                 <h1 class="big-text">REGARDE 👀 TES INFOS 📊🔥</h1>
-                
+                <div class="input-block">
+                    <label for="info-email">Adresse Electronique.</label>
+                    <input class="poudrapop-input" name="info-email" placeholder="Adresse Electronique" value="{{ session.user.email }}" disabled/>
+                </div>
+                <div class="input-block">
+                    <label for="info-name">Pseudonyme.</label>
+                    <input class="poudrapop-input" name="info-name" placeholder="Pseudonyme" value="{{ session.user.name }}" disabled/>
+                </div>
+                <div class="input-block">
+                    <label for="info-avatar">Avatar.</label>
+                    <img src="{{ session.user.avatar }}" width="50"/>
+                    <input class="poudrapop-input" name="info-avatar" placeholder="Avatar" value="{{ session.user.avatar }}" disabled/>
+                </div>
             </div>
         </div>
         {% include "inc/tutorial.twig" %}
