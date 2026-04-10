@@ -37,8 +37,8 @@
                         <div class="floor-wrapper">
                             <div class="poudra-floor"></div>
                         </div>
-                        <img alt="Product thumbnail 1" src="/assets/images/products/coco-caline-pic.webp" class="image-bottom" id="target-img">
-                        <img alt="Product thumbnail 2" src="/assets/images/products/coco-caline.webp" class="image-top">
+                        <img alt="Product thumbnail 1" src="/item/thumbnail/{{ item.id }}/1?size=400" class="image-bottom" id="target-img">
+                        <img alt="Product thumbnail 2" src="/item/thumbnail/{{ item.id }}/0?size=400" class="image-top">
                     </div>
                     <dialog id="lightbox">
                         <div class="lightbox-content">
@@ -48,10 +48,10 @@
                     </dialog>
                 </div>
                 <div id="container-item-right">
-                    <h1 id="product-item-title" class="big-text">coco-caline 😉</h1>
-                    <p id="product-item-price"><strong>17.90€</strong></p>
-                    <p style="margin:0;">En stock</p>
-                    <p>R&eacute;f: CC-CLN-001</p>
+                    <h1 id="product-item-title" class="big-text">{{ item.name }} 😉</h1>
+                    <p id="product-item-price"><strong>{{item.price}}€</strong></p>
+                    <p style="margin:0;">{{item.stock_status}}</p>
+                    <p>R&eacute;f: {{item.reference}}</p>
                     <button class="btn-add-cart">
                         AJOUTER AU PANIER
                     </button>
