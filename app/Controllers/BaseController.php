@@ -7,6 +7,7 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use App\Models\Users;
+use App\Models\Products;
 
 /**
  * BaseController provides a convenient place for loading components
@@ -30,6 +31,7 @@ abstract class BaseController extends Controller
 
     protected $twig;
     protected $userModel;
+    protected $productModel;
 
     /**
      * @return void
@@ -50,6 +52,7 @@ abstract class BaseController extends Controller
         $this->twig = new \Kenjis\CI4Twig\Twig($config);
         $this->twig->addGlobal('session', session());
         $this->userModel = new Users();
+        $this->productModel = new Products();
 
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
