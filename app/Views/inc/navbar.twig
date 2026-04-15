@@ -4,9 +4,9 @@
         <li><a href="/catalogue">🍭 Catalogue</a></li>
         <li><a href="/cart">🛒 Panier</a></li>
         {% if session.has('user') %}
-            <li><a href="/dashboard"><img src="{{ session.user.avatar }}" style="height:1rem;"/> Dashboard</a></li>
+            <li><a href="/dashboard"><img src="{{ session.user.avatar }}" style="height:1rem;"/> Tableau de bord</a></li>
         {% else %}
-            <li><a href="/login">👤 Login</a></li>
+            <li><a href="/login">👤 Connexion</a></li>
         {% endif %}
     </ul>
 </nav>
