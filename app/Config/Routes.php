@@ -6,10 +6,11 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/item/thumbnail/(:num)/(1|0)', "Home::item_thumbnail/$1/$2");
+$routes->get('item/thumbnail/(:num)/(1|0)', "Home::item_thumbnail/$1/$2");
 $routes->get("item/(:segment)", "Home::product/$1");
 $routes->get('login', 'Users::login_page');
 $routes->get('dashboard', 'Users::dashboard');
+$routes->get('catalogue', 'Home::catalogue');
 
 /////// OAUTH ///////
 $routes->get('auth/login',    'Users::login');
