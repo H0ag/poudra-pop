@@ -23,33 +23,77 @@
         {% include "inc/navbar.twig" %}
         <div id="container">
             {% include "inc/sidebar.twig" %}
-            <div id="container-right">
-                <div id="container-item-left">
-                    {# <img src="/assets/images/products/coco-caline.webp" /> #}
-                    <div class="item-thumbnail" id="zoom-trigger">
-                        <div class="floor-wrapper">
-                            <div class="poudra-floor"></div>
-                        </div>
-                        <img alt="Product thumbnail 1" src="/item/thumbnail/{{ item.id }}/1?size=400" class="image-bottom" id="target-img">
-                        <img alt="Product thumbnail 2" src="/item/thumbnail/{{ item.id }}/0?size=400" class="image-top">
+            <div id="container-right" class="product-page-layout">
+                <div class="product-visuals">
+                    <div class="main-image-container">
+                        <img id="main-product-image" src="/item/thumbnail/{{ item.id }}/0?size=600" alt="{{ item.name }}">
+                        {% if item.is_best_seller %}
+                            <div class="badge-best-seller">TOP VENTE</div>
+                        {% endif %}
                     </div>
-                    <dialog id="lightbox">
-                        <div class="lightbox-content">
-                            <img src="" alt="Coco caline image" id="lightbox-img">
-                            <button id="close-lightbox">Close</button>
-                        </div>
-                    </dialog>
+                    <div class="image-thumbnails">
+                        <button class="thumb-btn active" onclick="changeImage('/item/thumbnail/{{ item.id }}/0?size=600', this)">
+                            <img src="/item/thumbnail/{{ item.id }}/0?size=100" alt="Pixel Art">
+                        </button>
+                        <button class="thumb-btn" onclick="changeImage('/item/thumbnail/{{ item.id }}/1?size=600', this)">
+                            <img src="/item/thumbnail/{{ item.id }}/1?size=100" alt="Realistic">
+                        </button>
+                    </div>
                 </div>
-                <div id="container-item-right">
-                    <h1 id="product-item-title" class="big-text">{{ item.name }} 😉</h1>
-                    <p id="product-item-price"><strong>{{item.price}}€</strong></p>
-                    <p style="margin:0;">{{item.stock_status}}</p>
-                    <p>R&eacute;f: {{item.reference}}</p>
-                    <button class="btn-add-cart">
-                        AJOUTER AU PANIER
-                    </button>
+
+                <div class="product-details">
+                    <header class="product-header">
+                        <h1 class="small-text">{{ item.name }}</h1>
+                        <div class="product-meta">
+                            <span class="product-price">{{ item.price|number_format(2, ',', ' ') }}€</span>
+                        </div>
+                        <p class="product-ref">Référence : <strong>{{ item.reference }}</strong></p>
+                    </header>
+
+                    <section class="product-info-grid">
+                        <div class="info-card">
+                            <h3><i class="icon">✨</i> EFFET</h3>
+                            <p>{{ item.effect }}</p>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="info-item">
+                                <span class="label">Saveur :</span>
+                                <span class="value">{{ item.flavor }}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Composition :</span>
+                                <span class="value">{{ item.composition }}</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="purchase-zone">
+                        <div class="quantity-selector">
+                            <button onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+                            <input type="number" value="1" min="1">
+                            <button onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+                        </div>
+                        <button class="btn-add-to-cart">
+                            AJOUTER AU PANIER
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            <script>
+            /**
+            * Changes the main product image and updates the active thumbnail state
+            * @param {string} src - The source URL of the image
+            * @param {HTMLElement} btn - The clicked thumbnail button
+            */
+            function changeImage(src, btn) {
+                document.getElementById('main-product-image').src = src;
+                const thumbs = document.querySelectorAll('.thumb-btn');
+                thumbs.forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            </script>
         </div>
         {% include "inc/tutorial.twig" %}
     </main>
