@@ -49,10 +49,19 @@ class Home extends BaseController
 
     public function product($itemID):string
     {
-        $item = $this->productModel->select('id, name, stock_status, price, reference')->where('reference', $itemID)->first();
+        $item = $this->productModel->select('id, name, stock_status, price, reference, effect, flavor, composition')->where('reference', $itemID)->first();
         $data = [
             'item' => $item
         ];
         return $this->twig->render("product", $data);
+    }
+
+    public function catalogue():string
+    {
+        $products = $this->productModel->select('id, name, flavor, price, reference')->findAll();
+        $data = [
+            'products' => $products
+        ];
+        return $this->twig->render('catalogue', $data);
     }
 }
