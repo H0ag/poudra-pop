@@ -106,7 +106,7 @@ class Products extends Seeder
             [
                 'category_id'            => $categoryId,
                 'reference'              => 'SP-DURA-001',
-                'name'                   => 'DURA-LIGNE',
+                'name'                   => 'DURA-LEAN',
                 'price'                  => 22.00,
                 'stock_status'           => 'Survolté',
                 'composition'            => 'Lithium comestible, gélatine rose fluo et extraits de foudre de catégorie 4.',
