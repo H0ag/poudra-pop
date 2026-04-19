@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON panier ;) - POUDRA-POP</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/cart.css">
+
+    <script defer src="/assets/js/cart.js"></script>
+
+    <!-- Analytics poudra-pop -->
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+        {% include "inc/navbar.twig" %}
+        <div id="container">
+            {% include "inc/sidebar.twig" %}
+            <div id="container-right">
+                <h1 class="big-text">Ton panier V.I.P</h1>
+                <div id="poudra-cart-wrapper">
+                    <table class="poudra-table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Prix Unitaire</th>
+                                <th>Quantité</th>
+                                <th>Sous-total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items-body">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2" class="text-right"><strong>TOTAL DE LA COMMANDE</strong></td>
+                                <td id="cart-grand-total" class="price-tag">-.-- €</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <div class="cart-actions">
+                        <a href="/catalogue" class="btn-secondary">CONTINUER LES ACHATS</a>
+                        <button id="checkout-btn" class="btn-primary">PASSER À LA CAISSE 💳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
