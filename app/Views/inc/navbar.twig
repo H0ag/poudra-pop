@@ -1,8 +1,10 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="/assets/js/cart_logics.js"></script>
 <nav id="navbar">
     <ul>
         <li><a href="/">🏠 Accueil</a></li>
         <li><a href="/catalogue">🍭 Catalogue</a></li>
-        <li><a href="/cart">🛒 Panier</a></li>
+        <li><a href="/cart">🛒 Panier <span id="poudra-cart-count"></span></a></li>
         {% if session.has('user') %}
             <li><a href="/dashboard"><img src="{{ session.user.avatar }}" style="height:1rem;"/> Tableau de bord</a></li>
         {% else %}
