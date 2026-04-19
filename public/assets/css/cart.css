@@ -1,0 +1,113 @@
+#poudra-cart-wrapper {
+    background: #fff;
+}
+
+.poudra-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.poudra-table thead {
+    background: var(--rainbow);
+}
+.poudra-table thead th {
+    border-bottom: 2px solid #000;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.poudra-table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-thumb {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    object-fit: contain;
+    background: #fafafa;
+}
+
+.product-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+
+.product-ref {
+    display: block;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.qty-input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #000;
+    text-align: center;
+    font-family: inherit;
+}
+
+.col-subtotal {
+    font-weight: bold;
+}
+
+.poudra-table tfoot td {
+    border-top: 2px solid #000;
+    padding: 20px 15px;
+}
+
+#cart-grand-total {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 20px;
+    border: 2px solid #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.1s;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--rainbow);
+    color: #000;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background: #eee;
+}
+
+.text-right {
+    text-align: right;
+}
