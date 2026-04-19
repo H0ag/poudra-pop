@@ -11,6 +11,8 @@ $routes->get("item/(:segment)", "Home::product/$1");
 $routes->get('login', 'Users::login_page');
 $routes->get('dashboard', 'Users::dashboard');
 $routes->get('catalogue', 'Home::catalogue');
+$routes->get('cart', 'Home::cart');
+$routes->post('user/getcart', 'Home::getcart');
 
 /////// OAUTH ///////
 $routes->get('auth/login',    'Users::login');
