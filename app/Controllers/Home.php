@@ -64,4 +64,62 @@ class Home extends BaseController
         ];
         return $this->twig->render('catalogue', $data);
     }
+
+    public function cart():string
+    {
+        return $this->twig->render('cart');
+    }
+
+    /**
+     * POST /user/getcart
+     * Process the localStorage JSON and return validated product data
+     */
+    public function getCart()
+    {
+        // 1. Get JSON from request body (true for associative array)
+        $cartData = $this->request->getJSON(true);
+
+        if (empty($cartData) || !is_array($cartData)) {
+            return $this->response->setJSON([
+                'success'     => true,
+                'items'       => [],
+                'grand_total' => 0.00
+            ]);
+        }
+
+        $processedItems = [];
+        $grandTotal     = 0.00;
+
+        foreach ($cartData as $item) {
+            $ref = $item['ref'] ?? null;
+            $qty = (int)($item['qty'] ?? 1);
+
+            if (!$ref || $qty < 1) continue;
+
+            $product = $this->productModel->select('id, reference, name, price')->where('reference', $ref)->first();
+
+            if ($product) {
+                $price    = (float)$product['price'];
+                $subtotal = $price * $qty;
+                $grandTotal += $subtotal;
+
+                // 4. Build the validated item object
+                $processedItems[] = [
+                    'item_id'     => $product['id'],
+                    'ref'         => $product['reference'],
+                    'name'        => $product['name'],
+                    'valid_price' => number_format($price, 2, '.', ''),
+                    'qty'         => $qty,
+                    'item_total'  => number_format($subtotal, 2, '.', ''),
+                ];
+            }
+        }
+
+        // 5. Return the response
+        return $this->response->setJSON([
+            'success'     => true,
+            'items'       => $processedItems,
+            'grand_total' => number_format($grandTotal, 2, '.', '')
+        ]);
+    }
 }
