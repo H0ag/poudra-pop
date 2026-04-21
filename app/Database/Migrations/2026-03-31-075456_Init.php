@@ -146,11 +146,31 @@ class Init extends Migration
             'status' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
-                'default'    => 'Pending',
+                'default'    => 'Processing',
             ],
             'payment_method' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
+                'null'       => true,
+            ],
+            'shipping_full_name' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'shipping_address' => [
+                'type'       => 'TEXT',
+            ],
+            'shipping_city' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'shipping_zip' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
+            ],
+            'shipping_phone' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
                 'null'       => true,
             ],
             'created_at' => [
