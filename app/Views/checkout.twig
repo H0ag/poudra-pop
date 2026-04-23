@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alala, on passe à la caisse! - POUDRA-POP</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/checkout.css">
+
+    <script defer src="/assets/js/cart.js"></script>
+    <script defer src="/assets/js/checkout.js"></script>
+
+    <!-- Analytics poudra-pop -->
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  ACHÈTE TON KIT "OURS HIBERNATUS" ET RESTE ÉVEILLÉ JUSQU'EN 2028 !!! ✨ NE PAS RENIFLER LA POUDRE (WINK WINK) ! 🧸🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+        {% include "inc/navbar.twig" %}
+        <div id="container">
+            {% include "inc/sidebar.twig" %}
+            <div id="container-right">
+                <h1 class="big-text">Alala 😎, on passe à la caisse! 🤗</h1>
+                <div id="poudra-checkout-container">
+                    <div id="poudra-card-container">
+                        {% include 'inc/creditcard.html' %}
+                    </div>
+                    <form class="checkout-form" id="payment-form">
+                        <h2 class="section-title">Informations Bancaires</h2>
+                        
+                        <div class="form-group">
+                            <label>Nom sur la carte</label>
+                            <input type="text" id="input-holder" placeholder="toto tata" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Numéro de carte</label>
+                            <input type="text" id="input-number" maxlength="19" placeholder="0000 0000 0000 0000" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Expiration (MM/AA)</label>
+                                <input type="text" id="input-expiry" maxlength="5" placeholder="MM/AA" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CVC (Au dos)</label>
+                                <input type="text" id="input-cvc" maxlength="3" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <h2 class="section-title">Adresse de Livraison</h2>
+
+                        <div class="form-group">
+                            <label>Adresse (Rue, etc.)</label>
+                            <input type="text" id="shipping-address" placeholder="12 route des Cristaux" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ville</label>
+                                <input type="text" id="shipping-city" placeholder="Poudraville" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Code Postal</label>
+                                <input type="text" id="shipping-zip" placeholder="99000" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-validate">
+                            VALIDER LA COMMANDE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
