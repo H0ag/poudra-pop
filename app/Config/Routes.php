@@ -13,6 +13,7 @@ $routes->get('dashboard', 'Users::dashboard');
 $routes->get('catalogue', 'Home::catalogue');
 $routes->get('cart', 'Home::cart');
 $routes->post('user/getcart', 'Home::getcart');
+$routes->get('checkout', 'Home::checkout');
 
 /////// OAUTH ///////
 $routes->get('auth/login',    'Users::login');
