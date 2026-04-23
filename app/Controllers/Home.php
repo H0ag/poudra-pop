@@ -122,4 +122,14 @@ class Home extends BaseController
             'grand_total' => number_format($grandTotal, 2, '.', '')
         ]);
     }
+
+    public function checkout()
+    {
+        $user = session()->get('user');
+        if(!empty($user) && $user['isLoggedIn']) {
+            return $this->twig->render("checkout");
+        } else {
+            return redirect()->to('/login');
+        }
+    }
 }
