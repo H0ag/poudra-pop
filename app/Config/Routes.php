@@ -14,6 +14,10 @@ $routes->get('catalogue', 'Home::catalogue');
 $routes->get('cart', 'Home::cart');
 $routes->post('user/getcart', 'Home::getcart');
 $routes->get('checkout', 'Home::checkout');
+$routes->post('checkout/process', 'Home::checkout_process');
+$routes->get('cgv', 'Home::cgv');
+$routes->get('about', 'Home::about');
+$routes->get('faq', 'Home::faq');
 
 /////// OAUTH ///////
 $routes->get('auth/login',    'Users::login');
