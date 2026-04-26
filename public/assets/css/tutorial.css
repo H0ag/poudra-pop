@@ -36,3 +36,104 @@
 .tutorial-container-step-subtitle {
     color: grey;
 }
+
+
+
+.poudra-footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    border-top: 5px solid #000;
+    font-family: 'Courier New', monospace;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #888;
+}
+
+/* Links Columns */
+.footer-links-group {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    color: #ff85a1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.7rem;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links-group {
+        width: 100%;
+        justify-content: center;
+    }
+}
