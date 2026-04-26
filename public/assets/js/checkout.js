@@ -4,7 +4,7 @@ $(document).ready(function() {
         { 
             input: '#input-holder', 
             display: '.card-holder', 
-            mask: 'xxxx',
+            mask: 'xxxxxxxx',
             type: 'text'
         },
         { 
@@ -67,6 +67,53 @@ $(document).ready(function() {
 
             // 3. Update the card display
             $(config.display).text(displayValue);
+        });
+    });
+
+    /**
+     * Handles the final checkout submission
+     */
+    $('#payment-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        const $btn = $('.btn-validate');
+        const originalText = $btn.text();
+        $btn.prop('disabled', true).text('PROCESSING SHIPMENT...');
+
+        const cart = getRawCart();
+        
+        // Build the payload
+        const orderData = {
+            shipping: {
+                full_name: $('#input-holder').val(),
+                address: $('#shipping-address').val(),
+                city: $('#shipping-city').val(),
+                zip: $('#shipping-zip').val(),
+                phone: null
+            },
+            cart: cart,
+            payment_method: 'Credit Card'
+        };
+
+        $.ajax({
+            url: '/checkout/process', 
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(orderData),
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    localStorage.removeItem('poudra_pop_cart');
+                    window.location.href = '/dashboard?order_success=true';
+                } else {
+                    alert("Erreur d'usine: " + response.message);
+                    $btn.prop('disabled', false).text(originalText);
+                }
+            },
+            error: function() {
+                alert('Jcrois que la machine est cassée. Veuillez réessayer plus tard.');
+                $btn.prop('disabled', false).text(originalText);
+            }
         });
     });
 });
