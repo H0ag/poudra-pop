@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LES ARCHIVES - POUDRA-POP</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/faq.css">
+
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  L'USINE NE DORT JAMAIS... RESTE ÉVEILLÉ...</marquee>
+        
+        {% include "inc/navbar.twig" %}
+
+        <div id="container">
+
+            <div class="faq-wrapper">
+                <h1 class="big-text">MAINTENANCE & FAQ</h1>
+
+                <div class="faq-section">
+                    <h2>QUESTIONS FRÉQUENTES</h2>
+                    
+                    <details class="poudra-faq-item">
+                        <summary>D'où proviennent exactement vos cristaux ?</summary>
+                        <div class="faq-answer">
+                            <p>Nos matières premières sont extraites dans nos sites de haute altitude en Colombie. Elles subissent ensuite un triple raffinage dans notre usine centrale pour garantir une pureté de 99%.</p>
+                        </div>
+                    </details>
+
+                    <details class="poudra-faq-item">
+                        <summary>Quels sont les effets secondaires du "Bleu Turbo" ?</summary>
+                        <div class="faq-answer">
+                            <p>Les effets incluent une énergie décuplée, une concentration laser et une résistance accrue à la fatigue. En cas de visions d'oursons multicolores après 48h, nous conseillons une hydratation immédiate.</p>
+                        </div>
+                    </details>
+
+                    <details class="poudra-faq-item">
+                        <summary>Ma dose est-elle envoyée de manière discrète ?</summary>
+                        <div class="faq-answer">
+                            <p>Absolument. Nos sachets sont scellés sous vide et expédiés dans des emballages industriels neutres. Aucune mention de "Poudra-Pop" n'apparaît sur le colis extérieur.</p>
+                        </div>
+                    </details>
+
+                    <details class="poudra-faq-item">
+                        <summary>Puis-je annuler une commande en cours ?</summary>
+                        <div class="faq-answer">
+                            <p>Une fois que les machines à vapeur sont lancées et que la cuisson a débuté, aucune annulation n'est possible. Le protocole de l'usine est strict sur ce point.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-section">
+                    <h2>LOGISTIQUE DE LIVRAISON</h2>
+                    <table class="poudra-table industrial">
+                        <thead>
+                            <tr>
+                                <th>Secteur</th>
+                                <th>Méthode</th>
+                                <th>Délai Estimé</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Zone Locale</strong></td>
+                                <td>Pigeon-Vapeur</td>
+                                <td>24 - 48h</td>
+                            </tr>
+                            <tr>
+                                <td><strong>International</strong></td>
+                                <td>Convoi Clandestin</td>
+                                <td>5 - 7 Jours</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
