@@ -123,7 +123,10 @@ class Users extends BaseController
     {
         $user = session()->get('user');
         if(!empty($user) && $user['isLoggedIn']) {
-            return $this->twig->render("dashboard");
+            $data = [
+                'orders' => $this->ordersModel->select('id, total_price, status, payment_method, created_at')->where('user_id', $user['user_id'])->findAll()
+            ];
+            return $this->twig->render("dashboard", $data);
         } else {
             return redirect()->to('/login');
         }
