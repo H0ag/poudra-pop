@@ -192,3 +192,95 @@
     border-radius: 5px;
     font-size: 1.2rem;
 }
+
+
+/* Gemini m'a fait ce CSS pour la table des commandes. */
+.poudra-alert.success {
+    background: #d4edda;
+    border: 3px solid #000;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 0px #000;
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+}
+
+.alert-content { display: flex; align-items: center; gap: 20px; }
+.alert-icon { font-size: 2rem; }
+
+.status-badge {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.processing { background: #fff3cd; }
+.status-badge.shipped { background: #d1ecf1; }
+
+.btn-small {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.poudra-table.industrial {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.poudra-table.industrial th {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #000;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.poudra-table.industrial td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    color: #000;
+}
+
+.poudra-table.industrial tbody tr:hover {
+    background-color: #fff9fb;
+}
+
+.poudra-table.industrial tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.poudra-table.industrial td:nth-child(5) {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+@media (max-width: 600px) {
+    .poudra-table.industrial th, 
+    .poudra-table.industrial td {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+}
