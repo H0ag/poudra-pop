@@ -132,4 +132,77 @@ class Home extends BaseController
             return redirect()->to('/login');
         }
     }
+
+    public function checkout_process()
+    {
+        $db = \Config\Database::connect();
+        $json = $this->request->getJSON(true);
+        $user = session()->get('user');
+        
+        $shipping = $json['shipping'];
+        $cart = $json['cart'];
+
+        if (empty($cart)) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Your sachet is empty!']);
+        }
+
+        // Start Transaction
+        $db->transStart();
+
+        $totalPrice = 0;
+        foreach ($cart as $item) {
+            $product = $this->productModel->where('reference', $item['ref'])->first();
+            if ($product) {
+                $totalPrice += ($product['price'] * $item['qty']);
+            }
+        }
+
+        $orderId = $this->ordersModel->insert([
+            'user_id'            => $user['user_id'],
+            'total_price'        => $totalPrice,
+            'payment_method'     => $json['payment_method'],
+            'shipping_full_name' => $shipping['full_name'],
+            'shipping_address'   => $shipping['address'],
+            'shipping_city'      => $shipping['city'],
+            'shipping_zip'       => $shipping['zip'],
+            'shipping_phone'     => $shipping['phone'],
+            'status'             => 'processing',
+            'created_at'         => date('Y-m-d H:i:s')
+        ]);
+
+        foreach ($cart as $item) {
+            $product = $this->productModel->where('reference', $item['ref'])->first();
+            if ($product) {
+                $this->orderItemModel->insert([
+                    'order_id'   => $orderId,
+                    'product_id' => $product['id'],
+                    'quantity'   => $item['qty'],
+                    'unit_price' => $product['price']
+                ]);
+            }
+        }
+
+        $db->transComplete();
+
+        if ($db->transStatus() === false) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Database error during checkout.']);
+        }
+
+        return $this->response->setJSON(['success' => true]);
+    }
+
+    public function cgv()
+    {
+        return $this->twig->render('cgv');
+    }
+
+    public function about()
+    {
+        return $this->twig->render('about');
+    }
+    
+    public function faq()
+    {
+        return $this->twig->render('faq');
+    }
 }
