@@ -7,6 +7,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use App\Models\Users;
+use App\Models\Orders;
+use App\Models\OrderItem;
 use App\Models\Products;
 
 /**
@@ -31,6 +33,8 @@ abstract class BaseController extends Controller
 
     protected $twig;
     protected $userModel;
+    protected $orderModel;
+    protected $orderItemModel;
     protected $productModel;
 
     /**
@@ -45,13 +49,13 @@ abstract class BaseController extends Controller
         // Caution: Do not edit this line.
         parent::initController($request, $response, $logger);
 
-        $_SERVER["CI_ENVIRONMENT"] === "development" ||
-        $_SERVER["CI_STATUS"] === "maintenance"
-            ? ($config = ["cache" => false])
-            : ($config = []);
+        $_SERVER["CI_ENVIRONMENT"] === "development" || $_SERVER["CI_STATUS"] === "maintenance" ? ($config = ["cache" => false]) : ($config = []);
+        
         $this->twig = new \Kenjis\CI4Twig\Twig($config);
         $this->twig->addGlobal('session', session());
         $this->userModel = new Users();
+        $this->ordersModel = new Orders();
+        $this->orderItemModel = new OrderItem();
         $this->productModel = new Products();
 
         // Preload any models, libraries, etc, here.
