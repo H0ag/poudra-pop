@@ -14,6 +14,16 @@
     <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
 </head>
 <body>
+    <div id="order-success-alert" class="poudra-alert success" style="display: none;">
+        <div class="alert-content">
+            <span class="alert-icon">✨</span>
+            <div class="alert-text">
+                <strong>COMMANDE VALIDÉE !</strong>
+                <p>Tes bonbons sont en cours de cuisson.</p>
+            </div>
+            <button class="close-alert">&times;</button>
+        </div>
+    </div>
     <main id="main-container">
         <header>
             <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
@@ -43,6 +53,31 @@
                     <label for="info-avatar">Avatar.</label>
                     <img src="{{ session.user.avatar }}" width="50"/>
                     <input class="poudrapop-input" name="info-avatar" placeholder="Avatar" value="{{ session.user.avatar }}" disabled/>
+                </div>
+                <h2 class="big-text">📦 MES COMMANDES EN COURS</h2>
+                <div class="table-container">
+                    <table class="poudra-table industrial">
+                        <thead>
+                            <tr>
+                                <th>N° Commande</th>
+                                <th>Date</th>
+                                <th>Statut</th>
+                                <th>ETA</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in orders %}
+                                <tr>
+                                    <td>#{{c.id}}</td>
+                                    <td>{{c.created_at}}</td>
+                                    <td><span class="status-badge {{c.status|lower}}">Mise en sachet</span></td>
+                                    <td>Quand j'en aurai envie.</td>
+                                    <td>{{c.total_price}} €</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
