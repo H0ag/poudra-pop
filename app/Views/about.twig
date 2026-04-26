@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LES ARCHIVES - POUDRA-POP</title>
+
+    {% include "inc/referencement.twig" %}
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/archives.css">
+
+    <script async="" defer="" src="https://analytics.msallon.org/script.js" data-website-id="352f4853-e053-484f-9d0a-44a2bc88d212" data-domains="poudra-pop.msallon.org"></script>
+</head>
+<body>
+    <main id="main-container">
+        <header>
+            <img alt="POUDRA-POP logo" src="/assets/images/logo-ours.png">
+        </header>
+        <marquee scrollamount="10" direction="left" class="poudra-marquee">🌈🍬🍭 POUDRA-POP !!! POUDRA-POP !!! POUDRA-POP !!! 🍭🍬🌈  L'USINE NE DORT JAMAIS... RESTE ÉVEILLÉ...</marquee>
+        
+        {% include "inc/navbar.twig" %}
+
+        <div id="container">
+
+            <div class="about-wrapper">
+                <h1 class="big-text">L'USINE POUDRA-POP</h1>
+
+                <div class="about-section">
+                    <h2>NOTRE HISTOIRE</h2>
+                    <p>
+                        Fondée en 2026, l'usine Poudra-Pop est née d'une ambition simple : raffiner les meilleurs cristaux de sucre 
+                        en provenance directe de nos laboratoires partenaires en Colombie. Ce qui n'était qu'une petite unité de production 
+                        artisanale est aujourd'hui le leader du sachet "haute performance".
+                    </p>
+                    <p>
+                        Nos produits ne sont pas de simples bonbons. Ce sont des composés énergétiques conçus pour ceux qui exigent 
+                        une clarté mentale et une énergie débordante, peu importe l'heure ou le lieu.
+                    </p>
+                </div>
+
+                <div class="about-section">
+                    <h2>L'ÉQUIPE TECHNIQUE</h2>
+                    <table class="poudra-table industrial">
+                        <thead>
+                            <tr>
+                                <th>Unité</th>
+                                <th>Spécialité</th>
+                                <th>Localisation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Pop</strong></td>
+                                <td>Contrôle de la Pureté</td>
+                                <td>Labo Central</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ursus-1</strong></td>
+                                <td>Raffinage & Chimie</td>
+                                <td>Secteur S</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logistique</strong></td>
+                                <td>Exportation Discrète</td>
+                                <td>Cali / International</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="about-section">
+                    <h2>ENGAGEMENTS</h2>
+                    <ul>
+                        <li><strong>Pureté :</strong> Un taux de sucre cristallisé certifié à 99%.</li>
+                        <li><strong>Traçabilité :</strong> Du laboratoire colombien à votre sachet.</li>
+                        <li><strong>Effet :</strong> Une garantie "Zéro Sommeil" pour vos sessions intensives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% include "inc/tutorial.twig" %}
+    </main>
+</body>
+</html>
