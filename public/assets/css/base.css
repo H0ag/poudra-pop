@@ -97,7 +97,7 @@ header img {
     color: white;
     text-transform: uppercase;
     -webkit-text-stroke: 8px rgb(59, 52, 53);
-    paint-order: stroke fill;
+    paint-order: stroke;
     filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.2));
     line-height: .5;
 }
@@ -105,7 +105,7 @@ header img {
     color: white;
     text-transform: uppercase;
     -webkit-text-stroke: 4px rgb(59, 52, 53);
-    paint-order: stroke fill;
+    paint-order: stroke;
     filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.2));
     line-height: .2;
     font-size: 2rem;
@@ -157,6 +157,99 @@ header img {
 #left-items-container-logout:hover {
     background: #ff0000d5;
     cursor: pointer;
+}
+
+/* General Shitty Ad Base */
+.shitty-ad {
+    position: fixed;
+    /* Remove fixed width: 280px; */
+    width: fit-content; 
+    min-width: 220px;
+    max-width: 90vw; /* Safety: prevents ad from being wider than screen */
+    z-index: 10000;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.8);
+    background: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-header {
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.ad-cta {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px outset #fff;
+}
+
+.ad-image-container {
+    width: 100%;
+    height: auto; /* Remove fixed height: 150px; */
+    margin: 10px 0;
+    border: 1px solid #000;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-gif {
+    display: block;
+    max-width: 100%; /* Image fits the container width */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+.ad-text {
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Specific Themes */
+.ad-virus { border-color: red; font-family: "Impact", sans-serif; }
+.ad-virus .ad-header { background: red; }
+
+.ad-casino { border-color: #ff00ff; font-family: "Comic Sans MS", cursive; }
+.ad-casino .ad-header { background: #ff00ff; }
+.ad-casino .ad-body { background: #000; color: #00ff00; }
+
+.ad-heaven { border-color: gold; font-family: "Georgia", serif; }
+.ad-heaven .ad-header { background: gold; color: #000; }
+.ad-heaven .ad-body { background: #eef; color: #003366; }
+
+.ad-medical { border-color: #ffffff; background: #ff0000; color: #fff; }
+.ad-medical .ad-header { background: #fff; color: #f00; }
+.ad-medical .ad-cta { background: #fff; color: #f00; border: 3px double #f00; }
+
+.ad-ufo { border-color: #00ff00; background: #000; color: #00ff00; }
+.ad-ufo .ad-header { background: #003300; }
+.ad-ufo .ad-text { font-family: 'OCR A Std', monospace; }
+
+.ad-love { border-color: #ff85a1; background: #fff0f5; color: #d02090; }
+.ad-love .ad-header { background: #ff85a1; }
+.ad-love .ad-cta { border-radius: 20px; background: #ff1493; color: #fff; }
+
+.ad-tax { border-color: #333; background: #888; color: #000; }
+.ad-tax .ad-header { background: #333; }
+.ad-tax .ad-cta { background: #000; color: #ffd700; }
+
+.ad-glitch { border-color: #fff; background: #000; }
+.ad-glitch .ad-header { background: #fff; color: #000; }
+.ad-glitch .ad-text { animation: jitter 0.1s infinite; color: #fff; }
+
+@keyframes jitter {
+    0% { transform: translate(0); }
+    50% { transform: translate(2px, -2px); }
+    100% { transform: translate(-2px, 2px); }
 }
 
 @media screen and (max-width:740px) {
