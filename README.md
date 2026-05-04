@@ -56,7 +56,7 @@ Rendez-vous sur `localhost:8080` pour la dose de sucre !
 
 # Base de données
 ## MCD
-![MCD poudra-pop](https://raw.githubusercontent.com/H0ag/poudra-pop/refs/heads/main/documentation/images/bdd_mcd.jpg)
+![MCD poudra-pop](https://raw.githubusercontent.com/H0ag/poudra-pop/refs/heads/main/documentation/images/bdd_mcd_2.jpg)
 ## MLD
 ```
 users (id, google_id, email, display_name, profile_picture_url, created_at)
